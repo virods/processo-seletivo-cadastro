@@ -24,6 +24,11 @@ Este projeto é uma API de cadastro de usuários (pessoa física ou jurídica) d
 
 A API estará disponível em `http://localhost:8080/api/users`.
 
+## Documentação
+
+Para acessar a documentação (Feita via Swagger) acesse o link quando subir a app http://localhost:8080/swagger-ui/index.html#/Cadastro%20de%20usu%C3%A1rios
+
+
 ### Endpoint de criação de usuário
 
 - `POST /api/users`: Cria um novo usuário.
