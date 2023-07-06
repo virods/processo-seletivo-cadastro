@@ -9,23 +9,16 @@ Este projeto é uma API de cadastro de usuários (pessoa física ou jurídica) d
 
 ## Pré-requisitos
 
-- JDK 11 ou superior
+- JDK 17 ou superior
 - Docker (para executar o MongoDB)
 
 ## Configuração
 
 1. Clone o repositório:
 
-- git clone https://github.com/seu-usuario/processo-seletivo-cadastro.git
+- git clone https://github.com/virods/processo-seletivo-cadastro.git
 
-2. Inicie o banco de dados MongoDB usando o Docker:
-- docker run -d -p 27017:27017 --name mongodb mongo:latest
-
-3. Importe o projeto em uma IDE de sua preferência (por exemplo, IntelliJ, Eclipse).
-
-4. Aguarde as dependências serem baixadas automaticamente pelo Maven.
-
-5. Execute a classe `ProcessoSeletivoCadastroApplication` para iniciar a aplicação.
+2. Execute o comando `docker-compose up --build` para subir a aplicação e o banco de dados
 
 ## Uso
 
@@ -52,14 +45,10 @@ O corpo da requisição deve conter os dados do usuário em formato JSON:
 - Resposta de sucesso (HTTP 200):
 
 ``{
-"id": "611d440eb1ec4f15210b4d56",
-"document": "43864009820",
-"personType": "Pessoa Física",
-"name": "João da Silva",
-"age": 30,
-"email": "joao@example.com",
-"phone": "+55 11 99999-9999",
-"gender": "Masculino"
+    "data": {
+        "message": "Sucesso ao criar o usuario no banco de dados",
+        "personType": "Pessoa Física"
+    }
 }``
 
 - Resposta de erro de validação (HTTP 400):
