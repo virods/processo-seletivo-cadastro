@@ -37,7 +37,7 @@ A API estará disponível em `http://localhost:8080/api/users`.
 
 O corpo da requisição deve conter os dados do usuário em formato JSON:
 
-`{
+``{
 "document": "43864009820",
 "personType": "Pessoa Física",
 "name": "João da Silva",
@@ -45,13 +45,13 @@ O corpo da requisição deve conter os dados do usuário em formato JSON:
 "email": "joao@example.com",
 "phone": "+55 11 99999-9999",
 "gender": "Masculino"
-}`
+}``
 
 ### Exemplos de Resposta
 
 - Resposta de sucesso (HTTP 200):
 
-`{
+``{
 "id": "611d440eb1ec4f15210b4d56",
 "document": "43864009820",
 "personType": "Pessoa Física",
@@ -60,20 +60,20 @@ O corpo da requisição deve conter os dados do usuário em formato JSON:
 "email": "joao@example.com",
 "phone": "+55 11 99999-9999",
 "gender": "Masculino"
-}`
+}``
 
 - Resposta de erro de validação (HTTP 400):
 
-`
+``
 "data": {
   "message": "CPF Inválido"
-}`
+}``
 
 - Resposta de erro do servidor (HTTP 500):
 
-`"data": {
+``"data": {
   "message": "Internal Server Error"
-}`
+}``
 
 ## Contribuição
 
