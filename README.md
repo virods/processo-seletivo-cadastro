@@ -9,7 +9,7 @@ Este projeto é uma API de cadastro de usuários (pessoa física ou jurídica) d
 
 ## Pré-requisitos
 
-- JDK 11 ou superior
+- JDK 17 ou superior
 - Docker (para executar o MongoDB)
 
 ## Configuração
