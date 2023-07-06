@@ -1,4 +1,4 @@
-package com.wefin.processoseletivocadastro.dto;
+package com.wefin.processoseletivocadastro.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class UserResponse {
     private String message;
     private String personType;
+    private String document;
 }

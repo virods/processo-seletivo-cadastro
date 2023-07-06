@@ -1,10 +1,9 @@
 package com.wefin.processoseletivocadastro.controller;
 
-import com.wefin.processoseletivocadastro.dto.ErrorResponse;
-import com.wefin.processoseletivocadastro.dto.UserCreateResponse;
-import com.wefin.processoseletivocadastro.dto.UserRequest;
-import com.wefin.processoseletivocadastro.dto.UserResponse;
-import com.wefin.processoseletivocadastro.model.User;
+import com.wefin.processoseletivocadastro.dto.api.ErrorResponse;
+import com.wefin.processoseletivocadastro.dto.api.UserCreateResponse;
+import com.wefin.processoseletivocadastro.dto.user.UserRequest;
+import com.wefin.processoseletivocadastro.dto.user.UserResponse;
 import com.wefin.processoseletivocadastro.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;

@@ -1,6 +1,6 @@
 package com.wefin.processoseletivocadastro.utils;
 
-import com.wefin.processoseletivocadastro.dto.UserRequest;
+import com.wefin.processoseletivocadastro.dto.user.UserRequest;
 
 public class DocumentUtils {
 

@@ -1,7 +1,7 @@
 package com.wefin.processoseletivocadastro.service;
 
-import com.wefin.processoseletivocadastro.dto.UserRequest;
-import com.wefin.processoseletivocadastro.dto.UserResponse;
+import com.wefin.processoseletivocadastro.dto.user.UserRequest;
+import com.wefin.processoseletivocadastro.dto.user.UserResponse;
 import com.wefin.processoseletivocadastro.model.User;
 import com.wefin.processoseletivocadastro.repository.UserRepository;
 import com.wefin.processoseletivocadastro.utils.DocumentUtils;
@@ -27,6 +27,6 @@ public class UserService {
                 .personType(personType)
                 .build());
 
-       return UserResponse.builder().message(Messages.SUCCESS_CREATE).personType(user.getPersonType()).build();
+       return UserResponse.builder().message(Messages.SUCCESS_CREATE).personType(user.getPersonType()).document(user.getDocument()).build();
     }
 }

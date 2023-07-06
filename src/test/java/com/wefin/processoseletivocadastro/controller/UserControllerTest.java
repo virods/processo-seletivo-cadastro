@@ -1,10 +1,9 @@
 package com.wefin.processoseletivocadastro.controller;
 
 
-import com.wefin.processoseletivocadastro.dto.UserRequest;
-import com.wefin.processoseletivocadastro.dto.UserResponse;
+import com.wefin.processoseletivocadastro.dto.user.UserRequest;
+import com.wefin.processoseletivocadastro.dto.user.UserResponse;
 import com.wefin.processoseletivocadastro.json.JsonHelper;
-import com.wefin.processoseletivocadastro.model.User;
 import com.wefin.processoseletivocadastro.service.UserService;
 import com.wefin.processoseletivocadastro.utils.constants.Messages;
 import org.junit.jupiter.api.BeforeEach;

@@ -1,4 +1,4 @@
-package com.wefin.processoseletivocadastro.dto;
+package com.wefin.processoseletivocadastro.dto.user;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

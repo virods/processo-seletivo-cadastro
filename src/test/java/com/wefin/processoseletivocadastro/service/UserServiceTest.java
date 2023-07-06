@@ -1,6 +1,6 @@
 package com.wefin.processoseletivocadastro.service;
 
-import com.wefin.processoseletivocadastro.dto.UserRequest;
+import com.wefin.processoseletivocadastro.dto.user.UserRequest;
 import com.wefin.processoseletivocadastro.model.User;
 import com.wefin.processoseletivocadastro.repository.UserRepository;
 import org.junit.jupiter.api.Assertions;
