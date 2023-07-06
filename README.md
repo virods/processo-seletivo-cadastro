@@ -16,7 +16,7 @@ Este projeto é uma API de cadastro de usuários (pessoa física ou jurídica) d
 
 1. Clone o repositório:
 
-- git clone git@github.com:virods/processo-seletivo-cadastro.git
+- git clone [git@github.com:virods/processo-seletivo-cadastro.git](https://github.com/virods/processo-seletivo-cadastro.git)
 
 2. Inicie o banco de dados MongoDB usando o Docker:
 - docker run -d -p 27017:27017 --name mongodb mongo:latest
