@@ -35,7 +35,7 @@ public class UserControllerTest {
     public void setUp() {
         userDTO = UserRequest.builder()
                 .age(1)
-                .document("787.880.260-27")
+                .document("78788026027")
                 .email("teste@email.com")
                 .gender("Masculino")
                 .name("Teste")

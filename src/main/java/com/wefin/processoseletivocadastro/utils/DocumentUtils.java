@@ -1,13 +1,11 @@
 package com.wefin.processoseletivocadastro.utils;
 
 import com.wefin.processoseletivocadastro.dto.user.UserRequest;
+import com.wefin.processoseletivocadastro.utils.constants.Messages;
 
 public class DocumentUtils {
 
-    private static final String CPF =  "Pessoa Física";
-    private static final String CNPJ = "Pessoa Jurídica";
-
-    public static String resolvePersonType(UserRequest user) {
+    public static String resolvePersonType(final UserRequest user) {
         var document = user.getDocument();
 
         if (document == null) {
@@ -17,14 +15,14 @@ public class DocumentUtils {
         return switch (document.length()) {
             case 11 -> isValidCPF(user);
             case 14 -> isValidCNPJ(user);
-            default -> throw new IllegalArgumentException("Valor do documento deve ser preenchido");
+            default -> throw new IllegalArgumentException(Messages.INVALID_DOCUMENT);
         };
     }
 
-    private static String isValidCPF(UserRequest user) {
+    private static String isValidCPF(final UserRequest user) {
         var cpf = user.getDocument();
         if (cpf.length() != 11 || cpf.chars().allMatch(n -> n == cpf.charAt(0))) {
-            throw new IllegalArgumentException("CPF Inválido");
+            throw new IllegalArgumentException(Messages.INVALID_CPF);
         }
 
         String digits = cpf.substring(0, 9);
@@ -35,16 +33,16 @@ public class DocumentUtils {
                 {11, 10, 9, 8, 7, 6, 5, 4, 3, 2}});
         var isValid = verifiers.equals(calculatedVerifiers);
         if(isValid){
-            return CPF;
+            return Messages.CPF;
         } else {
-            throw new IllegalArgumentException("CPF Inválido");
+            throw new IllegalArgumentException(Messages.INVALID_CPF);
         }
     }
 
-    private static String isValidCNPJ(UserRequest user) {
+    private static String isValidCNPJ(final UserRequest user) {
         var cnpj = user.getDocument();
         if (cnpj.length() != 14 || cnpj.chars().allMatch(n -> n == cnpj.charAt(0))) {
-            throw new IllegalArgumentException("CNPJ Inválido");
+            throw new IllegalArgumentException(Messages.INVALID_CNPJ);
         }
 
         String digits = cnpj.substring(0, 12);
@@ -55,21 +53,21 @@ public class DocumentUtils {
                 {6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2}});
         var isValid = verifiers.equals(calculatedVerifiers);
         if(isValid){
-            return CNPJ;
+            return Messages.CNPJ;
         } else {
-            throw new IllegalArgumentException("CNPJ Inválido");
+            throw new IllegalArgumentException(Messages.INVALID_CNPJ);
         }
 
     }
 
-    private static String calculateVerifierDigits(String digits, int[][] weights) {
+    private static String calculateVerifierDigits(final String digits, final int[][] weights) {
         String firstVerifierDigit = String.valueOf(calculateVerifierDigit(digits, weights[0]));
         String secondVerifierDigit = String.valueOf(calculateVerifierDigit(digits + firstVerifierDigit, weights[1]));
 
         return firstVerifierDigit + secondVerifierDigit;
     }
 
-    private static int calculateVerifierDigit(String digits, int[] weights) {
+    private static int calculateVerifierDigit(final String digits, final int[] weights) {
         int sum = 0;
         for (int i = 0; i < digits.length(); i++) {
             sum += Character.getNumericValue(digits.charAt(i)) * weights[i];

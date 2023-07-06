@@ -15,7 +15,7 @@ public class UserService {
 
     private final UserRepository userRepository;
 
-    public UserResponse createUser(UserRequest userRequest) throws IllegalArgumentException {
+    public UserResponse createUser(final UserRequest userRequest) throws IllegalArgumentException {
        var personType = DocumentUtils.resolvePersonType(userRequest);
        User user = userRepository.save(User.builder()
                 .age(userRequest.getAge())
