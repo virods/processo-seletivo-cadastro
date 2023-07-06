@@ -18,14 +18,7 @@ Este projeto é uma API de cadastro de usuários (pessoa física ou jurídica) d
 
 - git clone https://github.com/virods/processo-seletivo-cadastro.git
 
-2. Inicie o banco de dados MongoDB usando o Docker:
-- docker run -d -p 27017:27017 --name mongodb mongo:latest
-
-3. Importe o projeto em uma IDE de sua preferência (por exemplo, IntelliJ, Eclipse).
-
-4. Aguarde as dependências serem baixadas automaticamente pelo Maven.
-
-5. Execute a classe `ProcessoSeletivoCadastroApplication` para iniciar a aplicação.
+2. Execute o comando `docker-compose up --build` para subir a aplicação e o banco de dados
 
 ## Uso
 
