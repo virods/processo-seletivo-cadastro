@@ -45,14 +45,10 @@ O corpo da requisição deve conter os dados do usuário em formato JSON:
 - Resposta de sucesso (HTTP 200):
 
 ``{
-"id": "611d440eb1ec4f15210b4d56",
-"document": "43864009820",
-"personType": "Pessoa Física",
-"name": "João da Silva",
-"age": 30,
-"email": "joao@example.com",
-"phone": "+55 11 99999-9999",
-"gender": "Masculino"
+    "data": {
+        "message": "Sucesso ao criar o usuario no banco de dados",
+        "personType": "Pessoa Física"
+    }
 }``
 
 - Resposta de erro de validação (HTTP 400):
